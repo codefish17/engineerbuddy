@@ -10,7 +10,3 @@ class Brain:
 if __name__ == "__main__":
     my_brain = Brain()
     my_brain.db_connection.close()
-
-    
-
-
