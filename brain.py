@@ -9,17 +9,6 @@ class Brain:
 
 if __name__ == "__main__":
     my_brain = Brain()
-
-    # j = job.Job()
-    # j.name = "testrow2"
-    # j.CreateJob(my_brain.db_connection)
-
-    cur = my_brain.db_connection.cursor()
-
-    res = cur.execute("PRAGMA table_xinfo(Jobs)")
-
-    print(res.fetchall())
-
     my_brain.db_connection.close()
 
     

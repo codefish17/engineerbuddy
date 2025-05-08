@@ -36,9 +36,16 @@ class Job:
         return res.fetchall()
     
     @staticmethod
-    def UpdateJob(connection, id, column, value):
-        pass
+    def UpdateJob(connection, id, column, value) -> bool:
+        cur = connection.cursor()
+
+        for row in cur.execute("PRAGMA table_xinfo(Jobs)"):
+            if column == row[1]:
+                cur.execute(f"UPDATE Jobs SET {column} = ? WHERE id=?", (value, id))
+                return True
         
+        return False
+
     @staticmethod
     def DeleteJob(connection, id):
         cur = connection.cursor()
