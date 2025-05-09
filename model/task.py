@@ -58,10 +58,10 @@ if __name__ == "__main__":
     #             description TEXT UNIQUE NOT NULL,
     #             date_created_TEXT,
     #             date_due TEXT,
-    #             parent_Task INTEGER NOT NULL,
+    #             parent_job INTEGER NOT NULL,
     #             parent_task INTEGER,
     #             is_complete INTEGER NOT NULL,
-    #             FOREIGN KEY (parent_Task) REFERENCES Tasks(id),
+    #             FOREIGN KEY (parent_job) REFERENCES Jobs(id),
     #             FOREIGN KEY (parent_task) REFERENCES Tasks(id)
     #             )""")
     

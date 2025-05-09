@@ -1,3 +1,4 @@
 *.db
 git-bash - Shortcut.lnk
 model/__pycache__/
+__pycache__/
